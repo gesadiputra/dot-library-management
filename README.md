@@ -1,33 +1,33 @@
-API User:
-POST /User/login - Login user
-GET /User/me - Get data user logged in
-POST /User/superadmin - Create a Superadmin user
-POST /User - Create a new user
-PUT /User - Update existing user
-DELETE /User - Delete existing user
-GET /User - Get List of user
-GET /User/{userId} - Get user detail
-
-Api Book:
-POST /Book - Create new book
-PUT /Book - Update existing book
-DELETE /Book - Delete existing book
-GET /Book - Get list of book
-GET /Book/{bookId} - get book detail
-GET /Book/author - get list of book author (for create & update book)
-GET /Book/genre - get list of genre (for create & update book)
-
-In API Create & Update there are two redundant body:
-"author" -> string
-"authorId" -> guid
-For Create and Update, either "author" or "authorId" must be entered, or it will throw exception.
-Only one can be used, so if using "author", "authorId" must not be used
-If using "author", a new Author will be created and used
-If using "authorId", an existing Author will be used
-
-"genreIds" -> list of guid
-"genres" -> list of string
-For Create and Update, "genreIds" and "genres" must be entered, or it will throw exception.
-Either of them can be used
-If using "genreIds", an existing Genre will be used
-If using "genres", a new Genre will be created and used
+API User:<br>
+POST /User/login - Login user<br>
+GET /User/me - Get data user logged in<br>
+POST /User/superadmin - Create a Superadmin user<br>
+POST /User - Create a new user<br>
+PUT /User - Update existing user<br>
+DELETE /User - Delete existing user<br>
+GET /User - Get List of user<br>
+GET /User/{userId} - Get user detail<br>
+<br>
+Api Book:<br>
+POST /Book - Create new book<br>
+PUT /Book - Update existing book<br>
+DELETE /Book - Delete existing book<br>
+GET /Book - Get list of book<br>
+GET /Book/{bookId} - get book detail<br>
+GET /Book/author - get list of book author (for create & update book)<br>
+GET /Book/genre - get list of genre (for create & update book)<br>
+<br>
+In API Create & Update there are two redundant body:<br>
+"author" -> string<br>
+"authorId" -> guid<br>
+For Create and Update, either "author" or "authorId" must be entered, or it will throw exception.<br>
+Only one can be used, so if using "author", "authorId" must not be used<br>
+If using "author", a new Author will be created and used<br>
+If using "authorId", an existing Author will be used<br>
+<br>
+"genreIds" -> list of guid<br>
+"genres" -> list of string<br>
+For Create and Update, "genreIds" and "genres" must be entered, or it will throw exception.<br>
+Either of them can be used<br>
+If using "genreIds", an existing Genre will be used<br>
+If using "genres", a new Genre will be created and used<br>
